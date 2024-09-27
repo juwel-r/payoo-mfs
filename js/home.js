@@ -1,3 +1,9 @@
+const a = 5
+const b = '54'
+const c = '54g'
+
+console.log(isNaN(c))
+
 
 //Add Money Action
 document
@@ -8,7 +14,7 @@ document
     const addBalance = getInputFieldValueById("add-money-amount");
     const pin = getInputFieldValueById("add-money-pin");
 
-    if (!isNaN(addBalance) && pin === 123 && addBalance > 0) {
+    if (!isNaN(document.getElementById('add-money-amount').value) && pin === 123 && addBalance > 0) {
       const newBalance = balance + addBalance;
       document.getElementById("balance").innerText = newBalance;
       document.getElementById("add-money-amount").value = "";
